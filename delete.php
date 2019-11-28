@@ -14,7 +14,7 @@ $data = [
 'id' => $ids
 ];
 $stmt = 
-	$pdo->prepare("delete form product where name = :id");
+	$pdo->prepare("delete form product where pid = :id");
 	$stmt->execute($data);
 	echo ("delete ok");
  ?>
