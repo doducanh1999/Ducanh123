@@ -11,10 +11,10 @@ $pdo = new PDO("pgsql:" . sprintf(
 ));
 $id = $_GET["id"];
 $data = [
-'id' => $id
+'id' => $ids
 ];
 $stmt = 
-	$pdo->prepare("delete form product where pid = :id");
+	$pdo->prepare("delete form product where name = :id");
 	$stmt->execute($data);
 	echo ("delete ok");
  ?>
