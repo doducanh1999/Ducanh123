@@ -28,7 +28,7 @@ $pdo = new PDO("pgsql:" . sprintf(
 	 	<?php
             foreach ($resultSet as $row) {
                 echo "<li>" .
-                 '<a href="delete.php?id=' . $row["nameid"] .  '">' .   $row["name"] 
+                 '<a href="delete.php?id=' . $row["pid"] .  '">' .   $row["name"] 
                         . '--'. $row["age"] 
                 . '</a>'
                 . "</li>";
