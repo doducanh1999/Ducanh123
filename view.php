@@ -25,13 +25,15 @@ $pdo = new PDO("pgsql:" . sprintf(
 	$resultSet = $stmt->fetchAll();
 	 ?>
 	 <ul>
-	 	<?php 
-	 	foreach ($resultSet as $row) {
-	 		echo "<li>".
-	 		$row["name"] . '--' . $row["price"]
-	 		."</li>";
-	 	}
-	 	 ?>
+	 	<?php
+            foreach ($resultSet as $row) {
+                echo "<li>" .
+                 '<a href="delete.php?id=' . $row["nameid"] .  '">' .   $row["name"] 
+                        . '--'. $row["age"] 
+                . '</a>'
+                . "</li>";
+            }
+        ?>
 	 </ul>
 </body>
 </html>
