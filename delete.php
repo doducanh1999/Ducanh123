@@ -11,7 +11,7 @@ $pdo = new PDO("pgsql:" . sprintf(
 ));
 $id = $_GET["id"];
 $data = [
-'id' => $ids
+'id' => $id
 ];
 $stmt = 
 	$pdo->prepare("delete from product where pid = :id");
